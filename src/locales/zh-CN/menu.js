@@ -1,4 +1,11 @@
 export default {
+  'menu.Account': '帐号管理',
+  'menu.UploadWorks': '作品上传',
+  'menu.Works': '科普作品',
+  'menu.DictMgmt': '字典管理',
+  'menu.OutstandingPeople': '科普人物',
+  'menu.Brand': '科普品牌',
+  'menu.PopsciMgmt': '科普管理',
   'menu.welcome': '欢迎',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',

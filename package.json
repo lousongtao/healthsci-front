@@ -6,6 +6,8 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=1 umi build",
     "build": "umi build",
+    "build:dev": "cross-env serverapi=http://localhost:8432 REACT_APP_ENV=dev UMI_ENV=dev umi build",
+    "build:prod": "cross-env serverapi=http://wcserver.shbxjk.cn REACT_APP_ENV=prod UMI_ENV=prod umi build",
     "deploy": "npm run build && npm run gh-pages",
     "dev": "npm run start:dev",
     "gh-pages": "gh-pages -d dist",
@@ -24,7 +26,8 @@
     "prettier": "prettier -c --write \"src/**/*\"",
     "serve": "umi-serve",
     "start": "cross-env UMI_ENV=dev umi dev",
-    "start:dev": "cross-env REACT_APP_ENV=dev MOCK=none UMI_ENV=dev umi dev",
+    "start:dev": "cross-env serverapi=http://localhost:8432 REACT_APP_ENV=dev MOCK=none UMI_ENV=dev umi dev",
+    "start:prod": "cross-env serverapi=http://wcserver.shbxjk.cn REACT_APP_ENV=prod MOCK=none UMI_ENV=prod umi dev",
     "start:no-mock": "cross-env MOCK=none UMI_ENV=dev umi dev",
     "start:no-ui": "cross-env UMI_UI=none UMI_ENV=dev umi dev",
     "start:pre": "cross-env REACT_APP_ENV=pre UMI_ENV=dev umi dev",

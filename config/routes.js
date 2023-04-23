@@ -43,14 +43,37 @@ export default [
     ],
   },
   {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
+    name: 'Account',
+    path: '/account',
+    component: './account'
+  },
+  {
+    name: 'Brand',
+    path: '/Brand',
+    component: './Brand',
+    access: 'canAddBrand'
+  },
+  {
+    name: 'PopsciMgmt',
+    path: '/PopsciMgmt',
+    component: './PopsciMgmt',
+    access: 'canAddMgmt'
+  },
+  {
+    name: 'Works',
+    path: '/WorksMgmt',
+    component: './WorksMgmt',
+    access: 'canAddWorks'
+  },
+  {
+    name: 'OutstandingPeople',
+    path: '/OutstandingPeople',
+    component: './OutstandingPeople',
+    access: 'canAddPeople'
   },
   {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/welcome.html',
   },
   {
     component: './404',

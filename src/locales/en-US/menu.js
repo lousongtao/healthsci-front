@@ -1,6 +1,13 @@
 export default {
-  'menu.welcome': 'Welcome',
+  'menu.welcome': '欢迎',
   'menu.more-blocks': 'More Blocks',
+  'menu.Account': '帐户',
+  'menu.UploadWorks': 'Upload Works',
+  'menu.Works': '科普作品',
+  'menu.DictMgmt': 'Dictionary',
+  'menu.OutstandingPeople': '科普人物',
+  'menu.Brand': '科普品牌',
+  'menu.PopsciMgmt': '科普管理',
   'menu.home': 'Home',
   'menu.admin': 'Admin',
   'menu.admin.sub-page': 'Sub-Page',
@@ -49,4 +56,5 @@ export default {
   'menu.editor.flow': 'Flow Editor',
   'menu.editor.mind': 'Mind Editor',
   'menu.editor.koni': 'Koni Editor',
+
 };

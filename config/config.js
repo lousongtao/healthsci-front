@@ -68,5 +68,9 @@ export default defineConfig({
   },
   mfsu: {},
   webpack5: {},
-  exportStatic: {},
+  exportStatic: {htmlSuffix:true},
+  define: {
+    serverapi: "http://localhost:8432",
+  },
+
 });

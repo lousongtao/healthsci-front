@@ -12,12 +12,14 @@ import { outLogin } from '@/services/ant-design-pro/api';
  */
 const loginOut = async () => {
   await outLogin();
+  sessionStorage.removeItem('auth');
+  sessionStorage.removeItem('username');
   const { query = {}, search, pathname } = history.location;
   const { redirect } = query; // Note: There may be security issues, please note
 
-  if (window.location.pathname !== '/user/login' && !redirect) {
+  if (window.location.pathname !== '/user/login.html' && !redirect) {
     history.replace({
-      pathname: '/user/login',
+      pathname: '/user/login.html',
       search: stringify({
         redirect: pathname + search,
       }),

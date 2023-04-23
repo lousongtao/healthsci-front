@@ -12,6 +12,6 @@ export default defineConfig({
     babelOptions: {},
   },
   define: {
-    serverapi: "http://localhost:8432",
+    serverapi: "http://wcserver.shbxjk.cn",
   },
 });
