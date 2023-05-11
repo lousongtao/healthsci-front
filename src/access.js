@@ -4,7 +4,7 @@
 export default function access(initialState) {
   const { currentUser } = initialState || {};
   return {
-    canAdmin: currentUser && currentUser.access === 'admin',
+    canAdmin: currentUser && currentUser.type == 1,
     canAddBrand: currentUser && (currentUser.permission === 'brand' || currentUser.type == '1' || currentUser.type == '2'),
     canAddPeople: currentUser && (currentUser.permission === 'people' || currentUser.type == '1' || currentUser.type == '2'),
     canAddWorks: currentUser && (currentUser.permission === 'works' || currentUser.type == '1' || currentUser.type == '2'),

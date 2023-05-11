@@ -72,6 +72,12 @@ export default [
     access: 'canAddPeople'
   },
   {
+    name: 'Stats',
+    path: '/stats',
+    component: './stats',
+    access: 'canAdmin'
+  },
+  {
     path: '/',
     redirect: '/welcome.html',
   },

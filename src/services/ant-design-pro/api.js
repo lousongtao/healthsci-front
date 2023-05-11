@@ -315,6 +315,15 @@ export async function getExportWorks(){
   });
 }
 
+export async function getStats(params){
+  return request('/wcapi/stats', {
+    params: {...params},
+    headers: {
+      Authorization: 'Basic ' + sessionStorage.getItem('auth')
+    },
+  });
+}
+
 export const API_UPLOADFILE = "/wcapi/noauth/uploadfile";
 export const exportWorksApi = '/wcapi/noauth/exportworksexcel/'; //导出作品
 export const exportBrandApi = '/wcapi/noauth/exportbrandexcel/'; //导出

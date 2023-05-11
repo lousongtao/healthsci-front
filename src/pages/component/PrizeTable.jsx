@@ -79,15 +79,11 @@ const EditableCell = ({
   return <td {...restProps}>{childNode}</td>;
 };
 const PrizeTable = (props) => {
-  console.log(1)
   //给原有数值赋予key值, 否则没有key会导致操作失败.
   const assignKey = () => {
-    console.log(2)
     props.prizeList?.forEach(p => p.key = p.seq);
-    console.log(3)
     return props.prizeList;
   }
-  console.log(4)
   //如果有带入的数据, 要找到最大的那个seq, 避免产生重复的记录
   const getMaxSeq = (list) => {
     let max = 0;
@@ -96,8 +92,6 @@ const PrizeTable = (props) => {
   }
 
   const [dataSource, setDataSource] = useState(assignKey());
-  console.log(5)
-  console.log('datasource = ' + JSON.stringify(dataSource));
   //count 用来给新增加的记录排序用的.
   const [count, setCount] = useState(getMaxSeq(props.prizeList) + 1);
   const handleDelete = (key) => {

@@ -325,11 +325,13 @@ const PopsciMgmtORGModal = (props) => {
 
   const buildFooter = () => {
     if (props.viewMode){
-      return (
-        [
-          <Button key="cancel" onClick={props.onCancel}>
-            关闭
-          </Button>,
+      let buttons = [
+        <Button key="cancel" onClick={props.onCancel}>
+          关闭
+        </Button>,
+      ];
+      if (!props.hideReturn){
+        buttons.push(
           <Popconfirm
             key="return"
             onConfirm={() => handleReturn()}
@@ -338,8 +340,9 @@ const PopsciMgmtORGModal = (props) => {
               退回
             </Button>
           </Popconfirm>
-        ]
-      )
+        );
+      }
+      return buttons;
     } else {
       return (
         [

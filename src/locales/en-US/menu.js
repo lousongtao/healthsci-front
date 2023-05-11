@@ -8,6 +8,7 @@ export default {
   'menu.OutstandingPeople': '科普人物',
   'menu.Brand': '科普品牌',
   'menu.PopsciMgmt': '科普管理',
+  'menu.Stats': '统计',
   'menu.home': 'Home',
   'menu.admin': 'Admin',
   'menu.admin.sub-page': 'Sub-Page',

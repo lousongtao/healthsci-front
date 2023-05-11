@@ -6,6 +6,7 @@ export default {
   'menu.OutstandingPeople': '科普人物',
   'menu.Brand': '科普品牌',
   'menu.PopsciMgmt': '科普管理',
+  'menu.Stats': '统计',
   'menu.welcome': '欢迎',
   'menu.more-blocks': '更多区块',
   'menu.home': '首页',

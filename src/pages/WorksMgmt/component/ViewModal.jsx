@@ -157,14 +157,14 @@ const ViewModal = (props) => {
    * effect不能用props.editObj做检查判断, 如果连续编辑同一条记录导致对象无变化的话, effect就不会重复执行.
    * effect不能只执行一次, 第一次执行是在父类初始化的时候. 要求每次改变props值都要执行一次
    */
-  useEffect(() => {
-    if (props.editObj !== editObj){
-      //要先把form清空, 再重新设置新的值, 否则当add的时候, 传入空对象, 无法覆盖之前的显示
-      form.resetFields();
-      form.setFieldsValue(props.editObj);
-      setEditObj(props.editObj);
-    }
-  } );
+  // useEffect(() => {
+  //   if (props.editObj !== editObj){
+  //     //要先把form清空, 再重新设置新的值, 否则当add的时候, 传入空对象, 无法覆盖之前的显示
+  //     form.resetFields();
+  //     form.setFieldsValue(props.editObj);
+  //     setEditObj(props.editObj);
+  //   }
+  // } );
 
   //java 保存的路径中, 有时候正斜线, 有时候反斜线
   const getFileUrlLink = () => {
@@ -223,7 +223,6 @@ const ViewModal = (props) => {
       //要先把form清空, 再重新设置新的值, 否则当add的时候, 传入空对象, 无法覆盖之前的显示
       form.resetFields();
       form.setFieldsValue(props.editObj);
-
       // 载入推荐用户信息
       if (props.editObj?.id){
         const tjdwacc = await getTjdwAccount(props.editObj.id);
